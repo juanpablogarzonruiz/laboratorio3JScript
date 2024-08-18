@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+
+
+<script>
+
+let text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+let obj = JSON.parse (text);
+let arreglo = obj.employees;    
+let rta="";    
+    
+document.getElementById("demo").innerHTML = "El tamaño del arreglo es de " + arreglo.length;
+    
+for (let vc=0;vc<arreglo.length;vc++){
+    rta = rta + arreglo[vc].firstName + " " + arreglo[vc].lastName + "<br>";
+}    
+document.getElementById("demo").innerHTML = rta;
+
+</script>
+
+    
+    
+</body>
+</html>
